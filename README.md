@@ -1,6 +1,6 @@
 # 🧠 Lung Tumor Classification using Topological Data Analysis
 
-This project applies **Topological Data Analysis (TDA)** — particularly **persistent homology** — to classify lung CT scan images as **normal**, **benign**, or **malignant**. We extract entropy-based features from both images and point clouds, and compare their classification performance using various machine learning and deep learning models. The top-performing approach achieved **97.6% accuracy** using entropy values from point clouds with a KNN classifier.
+This project applies **Topological Data Analysis (TDA)** — particularly **persistent homology** — to classify lung CT scan images as **normal**, **benign**, or **malignant**. We extract entropy-based features from both images and point clouds, and compare their classification performance using various machine learning and deep learning models. The top-performing approach achieved **97.67% accuracy** using entropy values from point clouds with a KNN classifier.
 
 ---
 
@@ -34,7 +34,7 @@ This project applies **Topological Data Analysis (TDA)** — particularly **pers
 
 This curve demonstrates the macro-averaged PR performance across all classes.
 
-![Macro-Averaged PR Curve](images/macro_pr_curve.png)
+![Macro-Averaged PR Curve](Output images/PR/1000_All_Model_Avg_PR.png)
 
 ---
 
@@ -42,7 +42,7 @@ This curve demonstrates the macro-averaged PR performance across all classes.
 
 This plot compares accuracy and F1-scores across all methods used.
 
-![Performance Comparison](images/method_comparison.png)
+![Performance Comparison](Output Images/Performance_metrics_all_models_(with heading).png)
 
 ---
 
@@ -61,3 +61,22 @@ Install dependencies using `requirements.txt`:
 
 ```bash
 pip install -r requirements.txt
+```
+
+## 📜 License
+
+This project is licensed under the [MIT License](LICENSE).  
+You are free to use, modify, and distribute this software in accordance with the terms of the license.
+
+---
+
+## 🙏 Acknowledgements
+
+We would like to extend our gratitude to the open-source community and the developers of the following tools and libraries that made this project possible:
+
+- **Ripser**, **Persim**, and **Tadasets** for enabling Topological Data Analysis in Python.
+- **Scikit-learn**, **XGBoost**, and **TensorFlow** for their powerful machine learning frameworks.
+- **Pillow**, **Scipy**, and **Matplotlib** for essential image processing and visualization tools.
+
+This project represents a fusion of concepts from **topology**, **image processing**, and **machine learning**, applied toward advancing research in **medical diagnostics**.
+

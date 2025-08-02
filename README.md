@@ -28,16 +28,6 @@ This project applies **Topological Data Analysis (TDA)** — particularly **pers
 
 ---
 
-## 📊 Results and Visualizations
-
-### 📈 Macro-Averaged Precision-Recall Curve
-
-This curve demonstrates the macro-averaged PR performance across all classes.
-
-![Macro-Averaged PR Curve](Output%20Images/PR/1000_All_Model_Avg_PR.png)
-
----
-
 ### 📊 Comparison of Model Performance
 
 This plot compares accuracy and F1-scores across all methods used.

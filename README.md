@@ -23,7 +23,7 @@ This project applies **Topological Data Analysis (TDA)** — particularly **pers
 | `point cloud entropy plot.ipynb` | Visualizes entropy patterns per class across image intensities. |
 | `Average points per layer.ipynb` | Analyzes average point count across layers in 3D point clouds. |
 | `Classification using Image features.ipynb` | Classifies CT images using extracted pixel-based features. |
-| `CNN new.ipynb` | CNN model to classify CT images directly from pixel data. |
+| `CNN.ipynb` | CNN model to classify CT images directly from pixel data. |
 | `ML Using entropy final.ipynb` | Summarizes ML models trained on entropy features from both images and point clouds. |
 
 ---

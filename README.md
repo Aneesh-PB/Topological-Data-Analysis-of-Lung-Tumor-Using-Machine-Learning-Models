@@ -1,79 +1,63 @@
-# Lung Tumor Classification using Topological Data Analysis
+# 🧠 Lung Tumor Classification using Topological Data Analysis
 
-This project explores the use of **Topological Data Analysis (TDA)**, specifically **persistent homology**, for classifying lung CT scan images into *normal*, *benign*, and *malignant* categories. By generating persistence diagrams from both images and point clouds, and computing entropy-based features, we compare the performance of traditional ML models and CNNs. The best-performing setup — using entropy from point clouds — achieved **97.6% accuracy** with KNN.
-
----
-
-## 📁 Repository Structure
-
-### 🔹 Input & Output
-
-- **Images/**  
-  Contains input CT scan images used for analysis.
-
-- **Point Cloud/**  
-  Contains Excel/CSV files representing point clouds generated from input images.
-
-- **Persistence/**  
-  Output images of persistence diagrams computed from the point clouds.
+This project applies **Topological Data Analysis (TDA)** — particularly **persistent homology** — to classify lung CT scan images as **normal**, **benign**, or **malignant**. We extract entropy-based features from both images and point clouds, and compare their classification performance using various machine learning and deep learning models. The top-performing approach achieved **97.6% accuracy** using entropy values from point clouds with a KNN classifier.
 
 ---
 
-### 🔹 Notebooks and Scripts
+## 📁 Project Structure
 
-- **Point cloud generation.ipynb**  
-  Generates point cloud files from the input CT scan images.
+### 🔸 Input / Output Data
 
-- **Persistence diagram generation.ipynb/**  
-  Code to generate persistence diagrams from the point clouds.
+- `Images/` — Original lung CT scan images.  
+- `Point Cloud/` — Excel/CSV files representing point clouds generated from the images.  
+- `Persistence/` — Persistence diagrams computed from the point clouds.  
 
-- **Classification using entropy values from images.ipynb**  
-  Classifies images based on entropy values computed directly from images.
+### 🔸 Core Notebooks and Scripts
 
-- **Classification using Entropy Values Generated from point cloud code/**  
-  Contains subfolders (`500`, `800`, `1000`, `2000`, `3000`) for different subsample sizes.  
-  Each contains:
-  - `.py` scripts to compute entropy values (saved in a subfolder named `Entropy`)
-  - A `.ipynb` notebook to classify based on the computed entropy
-
-- **Point cloud entropy plot.ipynb**  
-  Plots entropy values across different intensity levels for each class using point cloud-based entropy features.
-
-- **Average points per layer code.ipynb**  
-  Plots the average number of points across different layers of point clouds.
-
-- **Classification using Image features.ipynb**  
-  Classifies images using features directly extracted from the images.
-
-- **CNN new.ipynb**  
-  Implements a CNN for direct classification of CT scan images.
+| File | Description |
+|------|-------------|
+| `Point cloud generation.ipynb` | Generates point cloud representations from CT scan images. |
+| `Persistence diagram generation code/` | Scripts to generate persistence diagrams from point clouds. |
+| `Classification Using Entropy Values from Images.ipynb` | Classifies images based on entropy computed from raw pixel intensities. |
+| `Classification using Entropy Values Generated from point cloud code/` | Subfolders (`500`, `800`, `1000`, etc.) for different point cloud sizes. Each contains:<br>- Scripts to compute entropy features (`Entropy/` subfolder)<br>- Notebook for classification using these features |
+| `point cloud entropy plot.ipynb` | Visualizes entropy patterns per class across image intensities. |
+| `Average points per layer.ipynb` | Analyzes average point count across layers in 3D point clouds. |
+| `Classification using Image features.ipynb` | Classifies CT images using extracted pixel-based features. |
+| `CNN new.ipynb` | CNN model to classify CT images directly from pixel data. |
+| `ML Using entropy final.ipynb` | Summarizes ML models trained on entropy features from both images and point clouds. |
 
 ---
 
-## 🧪 Key Results
+## 📊 Results and Visualizations
 
-- **97.6% Accuracy** using KNN on entropy features from point cloud data.
-- Compared performance with CNN and image-based entropy models.
-- Subsampling analysis showed robust accuracy across varying point sizes.
+### 📈 Macro-Averaged Precision-Recall Curve
 
----
+This curve demonstrates the macro-averaged PR performance across all classes.
 
-## 🛠 Dependencies
-
-- Python 3.8+
-- NumPy, Pandas, scikit-learn, xgboost, scipy, skimage, optuna, shapely
-- matplotlib, seaborn, plotly
-- ripser, cripser, tcripser, persim (for persistent homology)
-- TensorFlow/Keras (for CNN)
-- Any additional dependencies are listed in each notebook.
+![Macro-Averaged PR Curve](images/macro_pr_curve.png)
 
 ---
 
-## 📄 License
+### 📊 Comparison of Model Performance
 
-This project is for academic/research purposes.
+This plot compares accuracy and F1-scores across all methods used.
+
+![Performance Comparison](images/method_comparison.png)
+
 ---
 
-## 🙌 Acknowledgements
+## ✅ Key Findings
 
-Inspired by the intersection of topological data analysis and medical imaging, this project demonstrates how abstract mathematical structures can improve classification performance in healthcare datasets.
+- **Entropy from Point Clouds + KNN**: ✅ **97.6% accuracy**
+- **Entropy from Images + KNN**: ✅ **95.91% accuracy**
+- Outperformed deep learning (CNN) and basic image feature-based models in multiple cases
+- Entropy-based features are highly discriminative for lung tumor classification
+
+---
+
+## 🛠 Installation
+
+Install dependencies using `requirements.txt`:
+
+```bash
+pip install -r requirements.txt

@@ -34,7 +34,7 @@ This project applies **Topological Data Analysis (TDA)** — particularly **pers
 
 This curve demonstrates the macro-averaged PR performance across all classes.
 
-![Macro-Averaged PR Curve](Output images/PR/1000_All_Model_Avg_PR.png)
+![Macro-Averaged PR Curve](Output%20Images/PR/1000_All_Model_Avg_PR.png)
 
 ---
 
@@ -42,7 +42,7 @@ This curve demonstrates the macro-averaged PR performance across all classes.
 
 This plot compares accuracy and F1-scores across all methods used.
 
-![Performance Comparison]('Output Images/Performance_metrics_all_models_(with heading).png')
+![Performance Comparison](Output%20Images/Performance_metrics_all_models_(with%20heading).png)
 
 ---
 

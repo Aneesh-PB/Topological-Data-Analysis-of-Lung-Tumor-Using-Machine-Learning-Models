@@ -42,7 +42,7 @@ This curve demonstrates the macro-averaged PR performance across all classes.
 
 This plot compares accuracy and F1-scores across all methods used.
 
-![Performance Comparison](Output Images/Performance_metrics_all_models_(with heading).png)
+![Performance Comparison]('Output Images/Performance_metrics_all_models_(with heading).png')
 
 ---
 

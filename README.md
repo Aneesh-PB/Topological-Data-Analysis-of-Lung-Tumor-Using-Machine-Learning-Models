@@ -38,7 +38,7 @@ This plot compares accuracy and F1-scores across all methods used.
 
 ## ✅ Key Findings
 
-- **Entropy from Point Clouds + KNN**: ✅ **97.6% accuracy**
+- **Entropy from Point Clouds + KNN**: ✅ **97.67% accuracy**
 - **Entropy from Images + KNN**: ✅ **95.91% accuracy**
 - Outperformed deep learning (CNN) and basic image feature-based models in multiple cases
 - Entropy-based features are highly discriminative for lung tumor classification

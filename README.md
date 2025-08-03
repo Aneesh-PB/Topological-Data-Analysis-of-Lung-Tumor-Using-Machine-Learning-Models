@@ -9,7 +9,8 @@ This project applies **Topological Data Analysis (TDA)** — particularly **pers
 ### 🔸 Input / Output Data
 
 - `Images/` — Original lung CT scan images.  
-- `Point Cloud/` — Excel/CSV files representing point clouds generated from the images.  
+- `Point Cloud/` — Sample point clouds (CSV) generated from 50 CT images.  
+  - 🔗 **[Full Point Cloud Output (Google Drive)](https://drive.google.com/drive/folders/1_umNv4g39fmAmxODi8_mhOmHFB5kKaSP?usp=drive_link)**  
 - `Persistence/` — Persistence diagrams computed from the point clouds.  
 
 ### 🔸 Core Notebooks and Scripts
